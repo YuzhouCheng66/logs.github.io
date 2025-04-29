@@ -1,70 +1,56 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LoGS: Visual Localization with Gaussian Splatting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    img, video {
-      display: block;
-      margin: 20px 0;
-      max-width: 100%;
-      height: auto;
-    }
-    a {
-      color: #0077cc;
-    }
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-  </style>
 </head>
-
 <body>
-<div class="container">
+  <div class="container">
+    <header>
+      <h1>LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images</h1>
+      <p class="authors">
+        Yuzhou Cheng<sup>1</sup>, Jianhao Jiao<sup>1*</sup>, Yue Wang<sup>2</sup>, Dimitrios Kanoulas<sup>1,3</sup><br>
+        <sup>1</sup>University College London, <sup>2</sup>Zhejiang University, <sup>3</sup>Athena RC
+      </p>
+      <div class="links">
+        <a href="assets/paper.pdf" target="_blank">📄 Paper (PDF)</a>
+        <a href="assets/demo.mp4" target="_blank">🎥 Demo Video</a>
+      </div>
+    </header>
 
-  <h1>LoGS: Visual Localization with Gaussian Splatting</h1>
+    <section class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Visual localization plays a crucial role in mobile robotics and augmented reality. Recent advances such as Gaussian Splatting have enabled realistic novel view synthesis, providing a promising foundation for localization tasks. However, existing methods typically require hundreds of training images to achieve good results. In this paper, we present LoGS, a system that tackles the few-shot localization problem by modifying Gaussian Splatting to allow training with very limited images. Our experiments demonstrate that LoGS achieves strong performance across diverse datasets, even with as few as 20 images, outperforming existing sparse and dense localization baselines.
+      </p>
+    </section>
 
-  <h2>摘要</h2>
-  <p>
-    我们提出了一种基于Gaussian Splatting的新型视觉定位方法，兼顾了高精度与强鲁棒性。
-  </p>
+    <section class="teaser">
+      <img src="assets/teaser.png" alt="Teaser Image">
+    </section>
 
-  <h2>方法概述</h2>
-  <p>
-    本文提出了一种新的方法，其核心公式如下：
-    \[ E = mc^2 \]
-  </p>
+    <section class="method">
+      <h2>Method Overview</h2>
+      <p>
+        LoGS introduces an efficient pipeline for few-shot localization leveraging Gaussian Splatting. The system consists of two stages: map construction with limited training images, and robust online localization based on differentiable rendering and optimization. Details can be found in our paper.
+      </p>
+    </section>
 
-  <h2>实验结果</h2>
-  <p>下图展示了实验结果示例：</p>
-  <img src="assets/example.png" alt="示意图">
-
-  <h2>演示视频</h2>
-  <video controls>
-    <source src="assets/demo.mp4" type="video/mp4">
-    您的浏览器不支持视频播放。
-  </video>
-
-  <h2>论文链接</h2>
-  <p>
-    <a href="assets/paper.pdf" target="_blank">点击查看完整论文 PDF</a>
-  </p>
-
-</div>
+    <section class="bibtex">
+      <h2>BibTeX</h2>
+      <pre>
+@article{cheng2024logs,
+  title={LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images},
+  author={Cheng, Yuzhou and Jiao, Jianhao and Wang, Yue and Kanoulas, Dimitrios},
+  journal={ICRA},
+  year={2025}
+}
+      </pre>
+    </section>
+  </div>
 </body>
 </html>

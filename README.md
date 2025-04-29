@@ -1,5 +1,6 @@
-# LoGS: Visual Localization with Gaussian Splatting
+# LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images
 
-这是用于展示我们论文项目的网站页面。
+Project website for our ICRA 2025 paper.
 
-部署方法：上传到 GitHub Pages 或本地浏览器打开。
+- [Paper (PDF)](assets/paper.pdf)
+- [Demo Video](assets/demo.mp4)
