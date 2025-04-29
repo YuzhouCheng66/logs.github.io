@@ -18,14 +18,14 @@
       </p>
       <div class="links">
         <a href="assets/paper.pdf" target="_blank">📄 Paper (PDF)</a>
-        <a href="assets/demo.mp4" target="_blank">🎥 Demo Video</a>
+        <a href="https://github.com/YuzhouCheng66/logs" target="_blank">💻 Code (GitHub)</a>
       </div>
     </header>
 
     <section class="abstract">
       <h2>Abstract</h2>
       <p>
-        Visual localization plays a crucial role in mobile robotics and augmented reality. Recent advances such as Gaussian Splatting have enabled realistic novel view synthesis, providing a promising foundation for localization tasks. However, existing methods typically require hundreds of training images to achieve good results. In this paper, we present LoGS, a system that tackles the few-shot localization problem by modifying Gaussian Splatting to allow training with very limited images. Our experiments demonstrate that LoGS achieves strong performance across diverse datasets, even with as few as 20 images, outperforming existing sparse and dense localization baselines.
+        Visual localization plays a crucial role in mobile robotics and augmented reality. Recent advances such as Gaussian Splatting have enabled realistic novel view synthesis, providing a promising foundation for localization tasks. However, existing methods typically require hundreds of training images to achieve good results. In this paper, we present LoGS, a system that tackles the few-shot localization problem by modifying Gaussian Splatting to allow training with very limited images. Our experime...
       </p>
     </section>
 
@@ -38,6 +38,18 @@
       <p>
         LoGS introduces an efficient pipeline for few-shot localization leveraging Gaussian Splatting. The system consists of two stages: map construction with limited training images, and robust online localization based on differentiable rendering and optimization. Details can be found in our paper.
       </p>
+    </section>
+
+    <section class="experiments">
+      <h2>Experiments</h2>
+      <p>
+        We demonstrate the performance of LoGS in challenging environments with few-shot training. 
+        The demo video shows qualitative results.
+      </p>
+      <video controls width="100%">
+        <source src="assets/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <section class="bibtex">
