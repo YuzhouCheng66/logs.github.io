@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Glider.js Carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -17,43 +22,53 @@
         <sup>1</sup>University College London, <sup>2</sup>Zhejiang University, <sup>3</sup>Athena RC
       </p>
       <div class="links">
-        <a href="assets/paper.pdf" target="_blank">📄 Paper (Arxiv)</a>
-        <a href="https://github.com/YuzhouCheng66/logs" target="_blank">💻 Code (GitHub)</a>
+        <a href="https://arxiv.org/abs/2410.11505" target="_blank">📄 Paper (arXiv)</a>
+        <a href="https://github.com/RPL-CS-UCL/gs_localization" target="_blank">💻 Code (GitHub)</a>
+        <a href="#" target="_blank">📦 Data</a>
       </div>
     </header>
 
-    <section class="abstract">
+    <div style="text-align: center;">
+      <video controls muted width="400" style="border-radius: 10px;">
+        <source src="assets/chess_transition_with_serif_labels.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    
+    
+
+    <section class="abstract" style="text-align: center;">
       <h2>Abstract</h2>
       <p>
-        Visual localization plays a crucial role in mobile robotics and augmented reality. Recent advances such as Gaussian Splatting have enabled realistic novel view synthesis, providing a promising foundation for localization tasks. However, existing methods typically require hundreds of training images to achieve good results. In this paper, we present LoGS, a system that tackles the few-shot localization problem by modifying Gaussian Splatting to allow training with very limited images. Our experime...
+        Visual localization is essential for mobile robotics and augmented reality. However, most existing methods require hundreds of training images to perform well. Recent technique 3D Gaussian Splatting enable realistic novel view synthesis, offering a promising foundation for localization. We introduce <b>LoGS</b>, a system that adapts Gaussian Splatting for few-shot localization. Our experiments show that LoGS achieves state-of-the-art accuracy using a limited number of training images—in some cases, even outperforming previous methods in full-shot settings.
       </p>
     </section>
 
-    <section class="teaser">
-      <img src="assets/teaser.png" alt="Teaser Image">
-    </section>
-
-    <section class="method">
+    <section class="method" style="text-align: center;">
       <h2>Method Overview</h2>
       <p>
         LoGS introduces an efficient pipeline for few-shot localization leveraging Gaussian Splatting. The system consists of two stages: map construction with limited training images, and robust online localization based on differentiable rendering and optimization. Details can be found in our paper.
       </p>
     </section>
 
-    <section class="experiments">
+    <section class="teaser">
+      <div style="text-align: center;">
+        <img src="assets/teaser.png" alt="Teaser Image" style="width: 90%;">
+      </div>
+    </section>
+
+    <section class="experiments" style="text-align: center;">
       <h2>Experiments</h2>
       <p>
-        We demonstrate the performance of LoGS in challenging environments with few-shot training. 
-        The demo video shows qualitative results.
+        The demo video shows qualitative results. We demonstrate the live localization performance of LoGS in an indoor environment with a few-shot pre-trained map. 
+        
       </p>
-      <div style="text-align: center;">
-        <video controls style="max-width: 70%;" poster="assets/cover.png">
-          <source src="assets/demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>    
-    
+      <video controls style="max-width: 70%;" poster="assets/cover.png">
+        <source src="assets/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
     <section class="bibtex">
       <h2>BibTeX</h2>
@@ -67,5 +82,24 @@
       </pre>
     </section>
   </div>
+
+  <!-- Glider.js Carousel Initialization -->
+  <script>
+    window.addEventListener('load', function(){
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        scrollLock: true,
+        draggable: true
+      });
+    });
+  </script>
 </body>
 </html>
+
+
+
