@@ -28,13 +28,57 @@
       </div>
     </header>
 
-    <div style="text-align: center;">
-      <video controls muted width="400" style="border-radius: 10px;">
-        <source src="assets/chess_transition_with_serif_labels.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <section class="carousel" style="margin-top: 30px; text-align: center;">
+      <div class="glider-contain">
+        <div class="glider">
+          <!-- Repeat 5 video blocks -->
+          <div>
+            <video autoplay loop muted playsinline style="width: 95%;">
+              <source src="assets/chess_transition_h264.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <video autoplay loop muted playsinline style="width: 95%;">
+              <source src="assets/redkitchen_transition_h264.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <video autoplay loop muted playsinline style="width: 95%;">
+              <source src="assets/office_transition_h264.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <video autoplay loop muted playsinline style="width: 95%;">
+              <source src="assets/heads_transition_h264.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div>
+            <video autoplay loop muted playsinline style="width: 95%;">
+              <source src="assets/office_transition_h264.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+      </div>
+    </section>
     
+    <script>
+      window.addEventListener('load', function(){
+        new Glider(document.querySelector('.glider'), {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          draggable: true,
+          scrollLock: true,
+          dots: '.dots',
+          arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+          }
+        });
+      });
+    </script>
     
     
 
