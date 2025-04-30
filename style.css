@@ -1,55 +1,81 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: #f8f9fa;
   margin: 0;
   padding: 0;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #111;
 }
+
 .container {
   width: 90%;
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 960px;
+  margin: 40px auto;
   background: #ffffff;
-  padding: 30px;
+  padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
+
 header {
   text-align: center;
+  margin-bottom: 30px;
 }
+
 h1 {
-  font-size: 28px;
+  font-size: 2.2em;
   color: #333;
+  font-weight: 600;
+  margin-bottom: 0.3em;
 }
+
+h2 {
+  font-size: 1.5em;
+  color: #222;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
 .authors {
-  font-size: 16px;
+  font-size: 1em;
   color: #666;
 }
+
 .links a {
   display: inline-block;
-  margin: 10px 10px 0 10px;
+  margin: 10px;
   text-decoration: none;
   color: white;
   background: #007bff;
   padding: 8px 16px;
   border-radius: 5px;
+  font-size: 0.95em;
 }
+
 .links a:hover {
   background: #0056b3;
 }
+
 .abstract, .method, .bibtex {
   margin-top: 40px;
 }
+
 .abstract p, .method p {
   text-align: justify;
 }
+
 .teaser img {
   width: 100%;
   border-radius: 8px;
   margin-top: 20px;
 }
+
 pre {
   background: #f1f1f1;
   padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
